@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            margin: 0;
+            color: rgb(28, 101, 219);
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        .temp_block {
+            list-style-type: none;
+            padding: 20px 0 20px 0;
+
+            width: 20%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .temp_block:hover {
+            background-color: rgb(248, 240, 224, 0.4);
+            border-radius: 10%;
+        }
+
+        .li1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            height: 50px;
+            background-color: rgb(2, 92, 247);
+            color: white;
+            border: 0 solid;
+            padding: 0 20px 0 20px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .btn:hover {
+            box-shadow: rgba(37, 39, 89, 0.8)0px 8px 8px 0;
+            transition: all 100ms ease-in;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        🌤️<br />
+        <h1>
+            Currently 21° in Tokyo
+        </h1>
+        <h1 style="margin-bottom: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: normal; color: black;">
+            13° /
+            <strong>23°</strong>
+        </h1>
+        <diV class="temp_block">
+            <li class="li1">🌧️Tomorrow</li>
+            <li>15° / 17°</li>
+        </div>
+        <div class="temp_block">
+            <li class="li1">⛅Saturday</li>
+            <li>10° / 22°</li>
+        </div>
+        <div class="temp_block">
+            <li class="li1">🌞Sunday</li>
+            <li>25° / 28°</li>
+        </div>
+
+        </ul>
+
+        <div>
+            <button class="btn">Change City</button>
+        </div>
+        <p style="font-family:monospace;">Coded by Vijeta Singh</p>
+    </div>
+
+</body>
+<script>
+    function h1(newh1) {
+        let h1 = document.querySelector("h1")
+        h1.innerHTML = newh1;
+    }
+    function temperature() {
+        let temp = prompt("What is the current temperature?");
+        return (temp);
+    }
+    function apply() {
+        let location = prompt("What is your location?");
+
+        if (temperature() > 20)
+            h1(`😁 Currently ${temperature()}° in ${location}`)
+        else
+            h1(`😔 Currently ${temperature()}° in ${location}`)
+    }
+    let btn = document.querySelector("button");
+    btn.addEventListener("click", apply);
+</script>
+<!-- function age() {
+let age = prompt("What is your age?");
+return (age >= 18);
+}
+function h1(newh1) {
+let h1 = document.querySelector("h1");
+h1.innerHTML = newh1;
+}
+function apply() {
+let name = prompt("What is your name?");
+
+if (age())
+h1(`Hi ${name}, Welcome to SheCodes`);
+else
+h1(`Sorry ${name}, you are not able to join SheCodes`);
+}
+let btn = document.querySelector("button");
+btn.addEventListener("click", apply); -->
+
+</html>

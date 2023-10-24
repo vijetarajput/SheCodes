@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        background: linear-gradient(to bottom, rgb(87, 194, 233), rgba(9, 170, 162, 0.7));
+        width: 50%;
+        border: 1px solid white;
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+        display: block;
+        margin: 30px 20px 30px 20px;
+        padding: 20px;
+        border: 2px solid white;
+        border-radius: 10px;
+    }
+
+    h2 {
+        color: white;
+        text-align: center;
+        margin: 0 0 10px;
+    }
+
+    hr {
+        margin: 0 20px 0 20px;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    p {
+        margin: 20px 20px 0 20px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+
+    a {
+        font-size: 12px;
+        color: white;
+    }
+
+    .btn {
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        background-color: black;
+        color: white;
+        font-weight: bolder;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    .btn:hover {
+        box-shadow: rgba(37, 39, 89, 0.8)0px 8px 8px 0;
+        transition: all 100ms ease-in;
+        cursor: pointer;
+        opacity: 0.8;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <h1>I love Yogurt</h1>
+        <h2>Especially Greek Yogurts</h2>
+        <hr><br />
+        <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/183/original/download.jpeg?1697137494"><br />
+        <hr>
+        <p><strong>Curd</strong>, also mosaru or dahi or Thayir or Perugu, is a traditional <strong>Yogurt</strong> or
+            fermented milk product, originating from and popular throughout the Indian subcontinent, usually prepared
+            from cow's milk, and sometimes buffalo milk, or goat milk.Buffalo curd is a traditional type of yogurt
+            prepared from water buffalo milk. It is popular throughout the <strong>Indian subcontinent.</strong> Buffalo
+            milk is traditionally considered better for making yogurt than cow milk due to its higher fat content making
+            a thicker yogurt mass.[6] Buffalo curd is usually packaged in clay pots. Buffalo curd is obtained by
+            bacterial fermentation of buffalo milk. In this process lactose in buffalo milk is converted into lactic
+            acid using several micro-organisms. The species involved in the fermentation are the same as above.
+            Buffalo milk has a higher amounts of protein, fat, lactose, minerals and vitamins than cow's milk. Quality
+            of the curd depends on the starter culture. Fermentation also develops the characteristic flavor and colour
+            of the product.<br /><a
+                href="https://en.wikipedia.org/wiki/Yogurt#:~:text=Dahi%20is%20a%20yogurt%20from,often%20used%20in%20Hindu%20ritual.">Read
+                on Wkipedia.</a><br /><br />
+            <button class="btn">Try Indian Yogurt</button>
+
+    </div>
+</body>
+<script>
+    function myClickEvent() {
+        let name = prompt("What is yor name");
+        if (name.length > 0) {
+            alert("Hi " + name + ", We will be in touch. Meanwhile, try Indian Yogurt!");
+        }
+        else {
+            alert("I think, you do not want to tell us your name. is it?");
+        }
+    }
+    let btn = document.querySelector("button");
+    btn.addEventListener("click", myClickEvent);
+</script>
+
+</html>

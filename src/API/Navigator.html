@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="H1">Current Location</h1><br />
+    <h2 id="H2">Current Location</h2><br />
+    <button id="Btn">Show Location</button>
+</body>
+<script>
+    function showPosition(position) {
+        let clat = position.coords.latitude;
+        let clong = position.coords.longitude;
+
+        let heading = document.querySelector("#H1");
+        heading.innerHTML = `Your current latitude is ${clat} and longitude is ${clong}`;
+    }
+    function apply() {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    }
+    let btn = document.querySelector("#Btn");
+    btn.addEventListener("click", apply);
+
+    function showTemp(response) {
+        let cTemp = response.data.main.temp;
+        let heading2 = document.querySelector("#H2");
+        console.log(cTemp);
+        heading2.innerHTML = `The temperature of current location is ${cTemp}`;
+    }
+
+    function retrieveTemp(position) {
+        let lat = position.coords.latitude;
+        let long = position.coords.longitude;
+        let apikey = "08f21c358ceb7bbd0f79880f5ba5bbf3";
+        let units = "metric";
+        let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather"
+        let apiurl = `${apiEndPoint}?lat=${lat}&lon=${long}&appid=${apikey}&units=${units}`;
+
+        axios.get(apiurl).then(showTemp);
+    }
+    navigator.geolocation.getCurrentPosition(retrieveTemp);
+</script>
+
+</html>

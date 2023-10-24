@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="H1">Weather</h1>
+</body>
+<script>
+
+    let apikey = "08f21c358ceb7bbd0f79880f5ba5bbf3";
+    let city = "Sydney"
+    let apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
+
+    function display(response) {
+        let temp = response.data.main.temp
+        console.log(`The temperature of ${city} is ${temp}`);
+
+        let heading = document.querySelector("#H1");
+        heading.innerHTML = `It is ${temp} in ${city}`;
+    }
+
+    axios.get(apiurl).then(display);
+
+
+</script>
+
+</html>

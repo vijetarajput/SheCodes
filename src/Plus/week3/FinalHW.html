@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="/src/Plus/styles.css" type="text/css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="margin-top: 20px;">
+        <input id="inputCityName" class="search" type="text" placeholder="Enter the city name" /><button
+            class="Sbtn">search</button>
+    </div>
+    <div class="main_container">
+        <div class="main">
+            <div class="heading">
+                <h2>London, Uk</h2>
+                <h5>Monday 16:00</h5>
+                <h5>Cloudy</h5>
+            </div>
+            <div class="temp">
+                <div class="cloud">☁️</div>
+                <h1 style="display: inline;">10 </h1>
+                <div class="degree">°C|°F</div>
+            </div>
+            <div class="wind">
+                <h6>Precipitation: 5%</h6>
+                <h6>Humidity: 82%</h6>
+                <h6>Wind: 13km/h</h6>
+            </div>
+            <div class="container text-center">
+                <div class="row" style="margin-left:270px;">
+                    <div class="col-auto col">
+                        Temperature
+                    </div>
+                    <div class="col-auto col">
+                        Precipitation
+                    </div>
+                    <div class="col-auto col">
+                        Wind
+                    </div>
+                </div>
+            </div>
+            <div class="image"><img src="/src/media/Image.png" width="599" height="100" style="margin-top: 10px;"></div>
+            <div class=" days">
+                <table class="mytable">
+                    <tr>
+                        <td>
+                            <p class="myrow" style="margin-left: 6px; margin-right: 40px;">Mon</p>
+                        </td>
+                        <td>
+                            <p class="myrow" style="margin-right: 46px;">Tue</p>
+                        </td>
+                        <td>
+                            <p class="myrow" style="margin-right: 40px;">Wed</p>
+                        </td>
+                        <td>
+                            <p class="myrow" style="margin-right: 48px;">Thu</p>
+                        </td>
+                        <td>
+                            <p class="myrow" style="margin-right: 54px;">Fri</p>
+                        </td>
+                        <td>
+                            <p class="myrow" style="margin-right: 52px;">Sat</p>
+                        </td>
+                        <td>
+                            <p class="myrow" style="margin-right: 45px;">Sun</p>
+                        </td>
+                        <td>
+                            <p class="myrow">Mon</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class=" mycard">
+                <p style="margin: 0;">Wed</p>
+                <p style="margin: 0;">☁️</p>
+                <p style="margin: 0;">13° 10°</p>
+            </div>
+            <div class="mycard">
+                <p style="margin: 0;">Wed</p>
+                <p style="margin: 0;">☁️</p>
+                <p style="margin: 0;">13° 10°</p>
+            </div>
+            <div class="mycard">
+                <p style="margin: 0;">Wed</p>
+                <p style="margin: 0;">☁️</p>
+                <p style="margin: 0;">13° 10°</p>
+            </div>
+            <div class="mycard">
+                <p style="margin: 0;">Wed</p>
+                <p style="margin: 0;">☁️</p>
+                <p style="margin: 0;">13° 10°</p>
+            </div>
+            <div class="mycard">
+                <p style="margin: 0;">Wed</p>
+                <p style="margin: 0;">☁️</p>
+                <p style="margin: 0;">13° 10°</p>
+            </div>
+            <div class="mycard">
+                <p style="margin: 0;">Wed</p>
+                <p style="margin: 0;">☁️</p>
+                <p style="margin: 0;">13° 10°</p>
+            </div>
+            <div class="mycard">
+                <p style="margin: 0;">Wed</p>
+                <p style="margin: 0;">☁️</p>
+                <p style="margin: 0;">13° 10°</p>
+            </div>
+            <div class="mycard">
+                <p style="margin: 0;">Wed</p>
+                <p style="margin: 0;">☁️</p>
+                <p style="margin: 0;">13° 10°</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    // let btn = document.querySelector("button");
+    // btn.addEventListener("click", apply);
+
+
+    let weather =
+    {
+        paris: { temp: 19.7, humidity: 80 },
+        tokyo: { temp: 17.3, humidity: 50 },
+        lisbon: { temp: 30.2, humidity: 20 },
+        sanfrancisco: { temp: 20.9, humidity: 100 },
+        oslo: { temp: -5, humidity: 20 }
+    };
+    let newCity = prompt("Enter city name:");
+    city = newCity.toLowerCase();
+    let temperature = weather[city].temp;
+
+    alert(`The current weather of ${newCity} is ${temperature}`);
+    console.log(`The current weather of ${newCity} is ${temperature}`);
+
+</script>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let obj = {}
+    console.log(obj);
+
+    obj = { temp: 18, humidity: 12 };
+    console.log(obj);
+    console.log(obj.temp);
+    console.log(obj.humidity);
+    obj = {
+        emp: 18,
+        humidity: 12,
+        windSpeed: 25
+    };
+    console.log(obj);
+    obj = [
+        { temp: 18 },
+        { humidity: 12 },
+        { windSpeed: 25 }
+    ];
+    console.log(obj);
+    obj = [
+        { day: 'Monday', temp: 18, humidity: 12, windSpeed: 25 },
+        { day: 'Tuesday', temp: 25, humidity: 15, windSpeed: 15 },
+        { day: 'Wednesday', temp: 20, humidity: 18, windSpeed: 20 }
+    ];
+    console.log(`Temperature of ${obj[0].day} is ${obj[0].temp}`);
+
+    let paris = {
+        name: "Paris",
+        country: "France",
+        language: "French",
+        temperature: 18,
+        capitalCity: true
+    };
+    let sydney = {
+        name: "Sydney",
+        country: "Australia",
+        language: "English",
+        temperature: 22,
+        capitalCity: true
+    };
+
+    console.log(sydney.temperature);
+
+    let arr = {
+        paris: {
+            name: "Paris",
+            country: "France",
+            language: "French",
+            temperature: 18,
+            capitalCity: true
+        },
+        sydney: {
+            name: "Sydney",
+            country: "Australia",
+            language: "English",
+            temperature: 22,
+            capitalCity: true
+        },
+        melborn: {
+            name: "Melborn",
+            country: "Australia",
+            language: "English",
+            temperature: 25,
+            capitalCity: true
+        }
+    }
+    console.log(arr.paris.name);
+    console.log(arr.paris.name, arr.paris.temperature);
+    console.log(arr.sydney.name, arr.sydney.temperature);
+    console.log(arr.melborn.name, arr.melborn.temperature);
+</script>
+
+</html>

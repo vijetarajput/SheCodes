@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Forms</h1>
+
+    <h3>Challenge 1</h3>
+
+    <button id="special-button">Click me</button>
+    <h3>Challenge 2</h3>
+    <p>
+    <form id="password-form">
+        <input type="password" id="password-input" placeholder="Enter your password">
+        <input type="submit" value="Sign up" id="a">
+    </form>
+    </p>
+
+    <h3>Challenge 3</h3>
+    <p>
+    <form id="signup-form">
+        <input type="email" id="email-input" placeholder="Enter your email" required>
+        <input type="username" id="username-input" placeholder="Enter your username" required>
+        <input type="submit" value="Sign up">
+    </form>
+    </p>
+</body>
+<script>
+    function hooray() {
+        alert("Hooray");
+    }
+    let btn1 = document.querySelector("#special-button");
+    btn1.addEventListener("click", hooray);
+
+    function sign() {
+        //event.preventDefault();
+        let pass = document.querySelector("#password-input");
+        alert(`The passwords is: ${pass.value}`);
+    }
+    let form = document.querySelector("#password-form");
+    form.addEventListener("submit", sign);
+
+    function sign2(event) {
+        event.preventDefault();
+        let email = document.querySelector("#email-input");
+        let username = document.querySelector("#username-input");
+        alert(`The email is: ${email.value} and the username is ${username.value}`);
+    }
+    let form2 = document.querySelector("#signup-form");
+    form2.addEventListener("submit", sign2);
+
+
+
+</script>
+
+</html>
